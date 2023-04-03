@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aplicacionmovil.Views.Trabajadores.TrabajadoresPage1"
+             Title="Lista Trabajadores " 
+             Padding="15">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="TxtSearch" 
+             Placeholder="Buscar trabajador" 
+             TextChanged="TxtSearch_TextChanged"
+             SearchButtonPressed="TxtSearch_SearchButtonPressed"/>
+            
+            <Button Text=" Nuevo Trabajador"
+                      x:Name="addToolBarItem"
+                      Clicked="addToolBarItem_Clicked">
+            </Button>
+        <ListView x:Name="TrabajadoresListView" 
+                  ItemsSource="{Binding Trabajadores}"
+                  HasUnevenRows="True"
+                  ItemTapped="TrabajadoresListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding Image}" HeightRequest="60" WidthRequest="60"></Image>
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="Nombre:"/>
+                                    <Label Text="{Binding Nombre}" FontSize="Medium"/>
+                                    <Label Text="Apellido:"/>
+                                    <Label Text="{Binding Description}"/>
+                                    <Label Text="DNI:"/>
+                                    <Label Text="{Binding DNI}"/>
+                                    <Label Text="Celular:"/>
+                                    <Label Text="{Binding Celular}"/>
+                                    <Label Text="Direccion"/>
+                                    <Label Text="{Binding Direccion}"/>
+                                    <Label Text="Correo:"/>
+                                    <Label Text="{Binding Correo}"/>
+                                </StackLayout>
+                            <StackLayout VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Image Source="editar.png"
+                                       HeightRequest="30"
+                                       WidthRequest="30">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="editarTapp" Tapped="editarTapp_Tapped"
+                                                          CommandParameter="{Binding Id}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image Source="delete.png"
+                                       HeightRequest="30"
+                                       WidthRequest="30">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="deleteTapp" Tapped="deleteTapp_Tapped"
+                                                          CommandParameter="{Binding Id}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

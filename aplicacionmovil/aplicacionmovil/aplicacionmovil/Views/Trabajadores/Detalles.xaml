@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aplicacionmovil.Views.Trabajadores.Detalles">
+    <ContentPage.Content>
+        <StackLayout Padding="20,40" Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="INFORMACIÓN DE TRABAJADORES" FontSize="Large" TextColor="#4A4A4A" HorizontalTextAlignment="Center"/>
+            <Frame BorderColor="#CCCCCC" CornerRadius="10" Padding="15">
+                <StackLayout Spacing="7">
+                    <Label Text="NOMBRE" FontSize="Small" TextColor="#4A4A4A"/>
+                    <Label x:Name="LabelNombre" FontSize="Large" TextColor="#2ECC71"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="#CCCCCC" CornerRadius="10" Padding="15">
+                <StackLayout Spacing="7">
+                    <Label Text="DESCRIPCIÓN" FontSize="Small" TextColor="#4A4A4A"/>
+                    <Label x:Name="LabelDescripcion" FontSize="Large" TextColor="#2ECC71"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="#CCCCCC" CornerRadius="10" Padding="15">
+                <StackLayout Spacing="7">
+                    <Label Text="DNI" FontSize="Small" TextColor="#4A4A4A"/>
+                    <Label x:Name="LabelDNI" FontSize="Large" TextColor="#2ECC71"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="#CCCCCC" CornerRadius="10" Padding="15">
+                <StackLayout Spacing="7">
+                    <Label Text="CELULAR" FontSize="Small" TextColor="#4A4A4A"/>
+                    <Label x:Name="LabelCelular" FontSize="Large" TextColor="#2ECC71"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="#CCCCCC" CornerRadius="10" Padding="15">
+                <StackLayout Spacing="7">
+                    <Label Text="DIRECCIÓN" FontSize="Small" TextColor="#4A4A4A"/>
+                    <Label x:Name="LabelDireccion" FontSize="Large" TextColor="#2ECC71"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="#CCCCCC" CornerRadius="10" Padding="15">
+                <StackLayout Spacing="7">
+                    <Label Text="CORREO" FontSize="Small" TextColor="#4A4A4A"/>
+                    <Label x:Name="LabelCorreo" FontSize="Large" TextColor="#2ECC71"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
